@@ -3,16 +3,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def displayPercentageBetweenTrainAndValidation(PATH_DIR):
+def displayPercentageBetweenTrainAndValidation(PATH_DIR_train, PATH_DIR_val):
     total_image_training = 0
 
     total_image_validation = 0
 
-    # Walk through pizza_steak directory and list number of files
-    for dirpath, dirnames, filenames in os.walk(PATH_DIR + "train"):
+    for dirpath, dirnames, filenames in os.walk(PATH_DIR_train):
         total_image_training += len(filenames)
 
-    for dirpath, dirnames, filenames in os.walk(PATH_DIR + "validation"):
+    for dirpath, dirnames, filenames in os.walk(PATH_DIR_val):
         total_image_validation += len(filenames)
 
     print(f"Total training images: {total_image_training}")

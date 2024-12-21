@@ -22,4 +22,4 @@ def data_exploring(PATH_DIR):
 
     print(f"Number of labels:{len(labels)} ")
 
-    return
+    return labels
